@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anglebert Ishimwe | Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">AI</div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Anglebert Ishimwe</h1>
+            <p class="subtitle">Software Developer & Student at ALU</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>I'm Anglebert Ishimwe, a student at African Leadership University and aspiring software developer. My mission is to use technology to improve access to education for underprivileged children across Africa. I'm passionate about innovation, leadership, and using digital tools to make meaningful change.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skills-category">
+                    <h3>Technical Skills</h3>
+                    <ul class="skills-list">
+                        <li>HTML, CSS, JavaScript (Basics)</li>
+                        <li>Python</li>
+                        <li>Git & GitHub</li>
+                        <li>Shell Scripting (Beginner)</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Soft Skills</h3>
+                    <ul class="skills-list">
+                        <li>Leadership</li>
+                        <li>Communication</li>
+                        <li>Adaptability</li>
+                        <li>Strategic Thinking</li>
+                        <li>Counseling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <h3>African Leadership University (ALU)</h3>
+                <p class="degree">Bachelor's Degree – Expected Graduation: 2024</p>
+                <p class="major">Major: Software Engineering / Technology</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-item">
+                    <h3>SoftPi Rwanda</h3>
+                    <p class="role">Intern (2025)</p>
+                    <p>Worked on the Rinda App to help users protect their tech devices. Assisted in UI testing and user feedback gathering.</p>
+                </div>
+                <div class="experience-item">
+                    <h3>CTDI</h3>
+                    <p class="role">Founder & Project Lead</p>
+                    <p>Launched the Community Tourism Development Initiative to help local Rwandan communities earn income through eco-tourism and homestays.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>CTDI Website Prototype</h3>
+                    <p>Designed an early version to connect tourists with local experiences.</p>
+                    <button class="project-btn" data-project="ctdi">Learn More</button>
+                </div>
+                <div class="project-card">
+                    <h3>GPA Calculator</h3>
+                    <p>Built a GPA calculator with dynamic assignment input and real-time calculation.</p>
+                    <button class="project-btn" data-project="gpa">Learn More</button>
+                </div>
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>Created with HTML, CSS, and JS to showcase my journey and projects.</p>
+                    <button class="project-btn" data-project="portfolio">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> anglebert@example.com</p>
+                    <p><i class="fas fa-phone"></i> +250 7XX XXX XXX</p>
+                    <p><i class="fab fa-github"></i> github.com/yourusername</p>
+                    <p><i class="fab fa-linkedin"></i> linkedin.com/in/anglebert</p>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Anglebert Ishimwe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
