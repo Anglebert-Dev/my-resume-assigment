@@ -2,6 +2,10 @@
 
 A modern, responsive personal resume website built with HTML, CSS, and JavaScript. This project showcases my skills, experience, and projects in a clean and professional manner.
 
+## Live Demo
+
+Visit the live website: [https://anglebert-dev.github.io/my-resume-assigment/](https://anglebert-dev.github.io/my-resume-assigment/)
+
 ## Features
 
 - Fully responsive design that works on all devices
@@ -10,21 +14,25 @@ A modern, responsive personal resume website built with HTML, CSS, and JavaScrip
 - Contact form with validation
 - Smooth scrolling navigation
 - Mobile-friendly navigation menu
+- Dynamic content loading
+- Form validation with JavaScript
+- Project details modal windows
 
 ## Technologies Used
 
-- HTML5
+- HTML5 (Semantic HTML)
 - CSS3 (with CSS Variables and Flexbox/Grid)
-- Vanilla JavaScript
-- Google Fonts
+- Vanilla JavaScript (ES6+)
+- Google Fonts (Montserrat & Roboto)
 - Font Awesome Icons
+- GitHub Pages for hosting
 
 ## Project Structure
 
 ```
 .
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles
+├── index.html          # Main HTML file with semantic structure
+├── styles.css          # CSS styles with responsive design
 ├── script.js           # JavaScript functionality
 └── README.md          # Project documentation
 ```
@@ -33,27 +41,32 @@ A modern, responsive personal resume website built with HTML, CSS, and JavaScrip
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Anglebert-Dev/my-resume-assigment
+   git clone https://github.com/Anglebert-Dev/my-resume-assigment.git
    ```
 
-2. Open `index.html` in your web browser to view the website locally.
+2. Navigate to the project directory:
+   ```bash
+   cd my-resume-assigment
+   ```
 
-3. To deploy to GitHub Pages:
-   - Push your code to a GitHub repository
+3. Open `index.html` in your web browser to view the website locally.
+
+4. To deploy to GitHub Pages:
+   - Fork this repository
    - Go to repository settings
    - Navigate to Pages section
    - Select the main branch as source
-   - Your site will be published at `https://yourusername.github.io/resume-website`
+   - Your site will be published at `https://yourusername.github.io/my-resume-assigment`
 
 ## Customization
 
 ### Colors
-The color scheme can be modified in the CSS variables:
+The color scheme uses Rwandan flag colors and can be modified in the CSS variables:
 ```css
 :root {
-    --blue: #00A1DE;
-    --yellow: #FAD201;
-    --green: #009A49;
+    --blue: #00A1DE;    /* Rwandan Blue */
+    --yellow: #FAD201;  /* Rwandan Yellow */
+    --green: #009A49;   /* Rwandan Green */
     --white: #FFFFFF;
     --black: #000000;
 }
@@ -63,22 +76,34 @@ The color scheme can be modified in the CSS variables:
 - Update personal information in `index.html`
 - Modify project details in `script.js`
 - Add or remove sections as needed
+- Customize the contact form functionality
 
-## Browser Support
+## Responsive Design
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+The website is fully responsive with breakpoints at:
+- Desktop: 1024px and above
+- Tablet: 768px to 1024px
+- Mobile: Below 768px
 
-## Contributing
 
-Feel free to fork this project and customize it for your own use. If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
 
-## License
+## Author
 
-This project is open source and available under the [MIT License](LICENSE).
+**Anglebert Ishimwe**
+- GitHub: [@Anglebert-Dev](https://github.com/Anglebert-Dev)
+- Email: a.ishimwe6@gmail.com
+- Phone: +250 791 746 914
+
+## Acknowledgments
+
+- African Leadership University (ALU) for the learning opportunity
+- Rwandan flag colors for the inspiration
+- Google Fonts for the typography
+- Font Awesome for the icons
 
 ## Contact
 
-For any questions or feedback, please reach out through the contact form on the website or via email at anglebert@example.com. 
+For any questions or feedback, please reach out through:
+- Email: a.ishimwe6@gmail.com
+- Phone: +250 791 746 914
+- GitHub: [@Anglebert-Dev](https://github.com/Anglebert-Dev) 
