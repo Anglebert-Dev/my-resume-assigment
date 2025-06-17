@@ -110,46 +110,147 @@ window.addEventListener('click', (e) => {
 
 // Form Validation
 const contactForm = document.getElementById('contact-form');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const messageInput = document.getElementById('message');
 
+// Validation rules
+const validationRules = {
+    name: {
+        minLength: 2,
+        maxLength: 50,
+        pattern: /^[a-zA-Z\s]*$/,
+        errorMessages: {
+            required: 'Name is required',
+            minLength: 'Name must be at least 2 characters',
+            maxLength: 'Name must be less than 50 characters',
+            pattern: 'Name can only contain letters and spaces'
+        }
+    },
+    email: {
+        pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+        errorMessages: {
+            required: 'Email is required',
+            pattern: 'Please enter a valid email address'
+        }
+    },
+    message: {
+        minLength: 10,
+        maxLength: 500,
+        errorMessages: {
+            required: 'Message is required',
+            minLength: 'Message must be at least 10 characters',
+            maxLength: 'Message must be less than 500 characters'
+        }
+    }
+};
+
+// Real-time validation
+function validateField(field, value) {
+    const rules = validationRules[field];
+    const errorElement = document.getElementById(`${field}-error`);
+    const inputElement = document.getElementById(field);
+    
+    // Reset previous states
+    errorElement.classList.remove('show');
+    inputElement.classList.remove('error', 'success');
+    
+    // Check if empty
+    if (!value.trim()) {
+        showError(field, rules.errorMessages.required);
+        return false;
+    }
+    
+    // Validate based on field type
+    switch(field) {
+        case 'name':
+            if (value.length < rules.minLength) {
+                showError(field, rules.errorMessages.minLength);
+                return false;
+            }
+            if (value.length > rules.maxLength) {
+                showError(field, rules.errorMessages.maxLength);
+                return false;
+            }
+            if (!rules.pattern.test(value)) {
+                showError(field, rules.errorMessages.pattern);
+                return false;
+            }
+            break;
+            
+        case 'email':
+            if (!rules.pattern.test(value)) {
+                showError(field, rules.errorMessages.pattern);
+                return false;
+            }
+            break;
+            
+        case 'message':
+            if (value.length < rules.minLength) {
+                showError(field, rules.errorMessages.minLength);
+                return false;
+            }
+            if (value.length > rules.maxLength) {
+                showError(field, rules.errorMessages.maxLength);
+                return false;
+            }
+            break;
+    }
+    
+    // If validation passes
+    showSuccess(field);
+    return true;
+}
+
+function showError(field, message) {
+    const errorElement = document.getElementById(`${field}-error`);
+    const inputElement = document.getElementById(field);
+    
+    errorElement.textContent = message;
+    errorElement.classList.add('show');
+    inputElement.classList.add('error');
+    inputElement.classList.remove('success');
+}
+
+function showSuccess(field) {
+    const errorElement = document.getElementById(`${field}-error`);
+    const inputElement = document.getElementById(field);
+    
+    errorElement.classList.remove('show');
+    inputElement.classList.remove('error');
+    inputElement.classList.add('success');
+}
+
+// Add input event listeners for real-time validation
+nameInput.addEventListener('input', () => validateField('name', nameInput.value));
+emailInput.addEventListener('input', () => validateField('email', emailInput.value));
+messageInput.addEventListener('input', () => validateField('message', messageInput.value));
+
+// Form submission
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const message = messageInput.value.trim();
     
-    // Simple validation
-    if (name === '') {
-        alert('Please enter your name');
-        return;
+    // Validate all fields
+    const isNameValid = validateField('name', name);
+    const isEmailValid = validateField('email', email);
+    const isMessageValid = validateField('message', message);
+    
+    if (isNameValid && isEmailValid && isMessageValid) {
+        // If all validations pass, show success message
+        alert('Thank you for your message! I will get back to you soon.');
+        contactForm.reset();
+        
+        // Reset all validation states
+        [nameInput, emailInput, messageInput].forEach(input => {
+            input.classList.remove('error', 'success');
+            document.getElementById(`${input.id}-error`).classList.remove('show');
+        });
     }
-    
-    if (email === '') {
-        alert('Please enter your email');
-        return;
-    }
-    
-    if (!isValidEmail(email)) {
-        alert('Please enter a valid email address');
-        return;
-    }
-    
-    if (message === '') {
-        alert('Please enter your message');
-        return;
-    }
-    
-    // If validation passes, you would typically send the form data to a server
-    // For now, we'll just show a success message
-    alert('Thank you for your message! I will get back to you soon.');
-    contactForm.reset();
 });
-
-// Email validation helper function
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
 
 // Add active class to navigation items on scroll
 const sections = document.querySelectorAll('section');
