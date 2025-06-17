@@ -1,3 +1,15 @@
+/**
+ * Personal Resume Website JavaScript
+ * Author: Anglebert Ishimwe
+ * Date: 2025
+ * 
+ * This file handles all interactive features including:
+ * - Navigation menu toggle
+ * - Form validation
+ * - Project modal
+ * - Smooth scrolling
+ */
+
 // Navigation Toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navList = document.querySelector('.nav-list');

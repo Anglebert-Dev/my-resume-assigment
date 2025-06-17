@@ -1,24 +1,30 @@
-/* Variables */
+/* 
+ * Personal Resume Website Styles
+ * Author: Anglebert Ishimwe
+ * Date: 2025
+ */
+
+/* Variables - Using Rwandan Flag Colors */
 :root {
     /* Rwandan Flag Colors */
-    --blue: #00A1DE;
-    --yellow: #FAD201;
-    --green: #009A49;
-    --white: #FFFFFF;
-    --black: #000000;
+    --blue: #00A1DE;    /* Primary color */
+    --yellow: #FAD201;  /* Accent color */
+    --green: #009A49;   /* Secondary color */
+    --white: #FFFFFF;   /* Background color */
+    --black: #000000;   /* Text color */
     
     /* Typography */
     --heading-font: 'Montserrat', sans-serif;
     --body-font: 'Roboto', sans-serif;
     
-    /* Spacing */
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 2rem;
-    --spacing-lg: 3rem;
+    /* Spacing System */
+    --spacing-xs: 0.5rem;  /* Extra small spacing */
+    --spacing-sm: 1rem;    /* Small spacing */
+    --spacing-md: 2rem;    /* Medium spacing */
+    --spacing-lg: 3rem;    /* Large spacing */
     
     /* Border Radius */
-    --border-radius: 8px;
+    --border-radius: 8px;  /* Consistent border radius */
 }
 
 /* Reset & Base Styles */
