@@ -33,7 +33,7 @@ A modern, responsive personal resume website built with HTML, CSS, and JavaScrip
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/resume-website.git
+   git clone https://github.com/Anglebert-Dev/my-resume-assigment
    ```
 
 2. Open `index.html` in your web browser to view the website locally.
